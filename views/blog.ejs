@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+
+
+    <div class="div">
+        <% post.forEach(singlepost=>{%>
+            <div class="boxshadow">
+                <div class="posttitle">
+                    <span>
+                        <%= singlepost.date%>
+                    </span>
+                </div>
+                <div class="posttitle">
+                    <span class="bold">
+                        <%= singlepost.title%>
+                    </span>
+                </div>
+          
+                <div class="posttitle">
+                    <span class="morelink span">
+                        <%= singlepost.data.substring(0,140)+ "..."%><a href="/search/<%=singlepost.title%>">read more</a>     
+                    </span>
+                </div>
+            </div>
+            <% })%>
+    </div>
+    <%- include('partials/footer'); -%>

@@ -1,0 +1,15 @@
+<%- include('partials/header'); -%>
+
+<div class="new-post">
+    <h1>New Post</h1>
+</div>
+<form action="/edit" method="post">
+    <div class="input">
+    <label for="title">New Titel</label>
+    <input type="text" name="titleEntery" id="title" required maxlength="140">
+    <label for="">New Post</label>
+    <textarea name="postEntery" id="post" cols="30" rows="10" maxlength="2000" required></textarea>
+    </div>
+    <button type="submit" class="btn">submit</button>
+</form>
+<%- include('partials/footer'); -%>
